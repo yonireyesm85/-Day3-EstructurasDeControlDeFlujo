@@ -1,0 +1,275 @@
+/* # estilos css */
+
+:root {
+  --color-primario: #5c8d89;
+  --color-secundario: #a1e3f9;
+  --fuente-principal: Arial, Helvetica, sans-serif;
+  --fuente-secundaria: "Times New Roman", Times, serif;
+}
+
+/* 🔹 Reset global */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    var(--color-primario) 100%,
+    #74b49b 66.67%,
+    #a7d7c5 33.33%,
+    #f9f8eb 0%
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/BosqueDeZelda-img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  padding: 1.25rem 0;
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  font-size: 1.625rem;
+  font-family: var(--fuente-principal);
+}
+
+.verde-icon-header {
+  width: 5.625rem;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 0.3125rem;
+}
+
+.game-container {
+  width: 80%;
+  max-width: 75rem;
+  height: 50vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  border: 1px solid var(--color-secundario);
+  box-shadow: 0.25rem 0.25rem 1.25rem 0 rgba(1, 8, 14, 0.2);
+  background-image: url("./assets/Ruido");
+  background-size: 100% 100%;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.game-informaciones {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem; /* Aumentamos el espacio entre los elementos dentro de game-informaciones */
+}
+
+.game-questions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#wizard-text {
+  font-size: 2.8125rem;
+  font-weight: 400;
+  color: var(--color-secundario);
+  font-family: var(--fuente-secundaria);
+}
+
+.mago-azul {
+  width: auto;
+  vertical-align: middle;
+}
+
+button {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  border: none;
+  padding: 0.9375rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  margin-right: 0.625rem;
+}
+
+button:hover {
+  background: var(--color-secundario);
+  transform: scale(1.05);
+  cursor: pointer;
+  color: var(--color-primario);
+}
+
+button:focus {
+  outline: 2px solid var(--color-secundario);
+  transition: 0.3s;
+}
+
+button:disabled {
+  background-color: #898989;
+  cursor: not-allowed;
+}
+
+.zelda-icon {
+  width: 30%;
+}
+
+#play-music {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  border: none;
+  padding: 0.3125rem 0.75rem;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+#play-music:hover {
+  background: var(--color-secundario);
+  transform: scale(1.05);
+  cursor: pointer;
+  color: var(--color-primario);
+}
+
+#play-music:focus {
+  outline: 2px solid var(--color-secundario);
+  transition: 0.3s;
+}
+
+#play-music:disabled {
+  background-color: #898989;
+  cursor: not-allowed;
+}
+
+.footer {
+  background-color: #74b49b;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+  color: var(--color-primario);
+  text-align: center;
+  font-family: var(--fuente-principal);
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 100%;
+}
+
+.bender-icon-footer {
+  width: 1.5625rem;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 0.3125rem;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 1250px) {
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    background-image: url("./assets/BosqueDeZelda-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    z-index: -1;
+    box-sizing: border-box;
+  }
+
+  header {
+    padding: 1rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .game-container {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /* Aquí se distribuye el espacio dentro del contenedor */
+    margin-top: 1.5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    gap: 2rem; /* Espacio entre los elementos dentro del contenedor */
+  }
+
+  .game-informaciones {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .mago-azul {
+    margin-top: 1rem; /* Espacio adicional arriba para el mago */
+  }
+
+  .game-questions {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    margin-top: 1.5rem;
+  }
+
+  #play-music {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .zelda-icon {
+    width: 50%;
+  }
+
+  .footer {
+    font-size: 1rem;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+}

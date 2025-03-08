@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>#7DaysOfCode</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        Listo! Para comenzar el viaje..
+        <img
+          src="./assets/logo-verde-removebg-preview.png"
+          alt="hojas verdes"
+          class="verde-icon-header"
+        />
+      </h1>
+    </header>
+    <div class="game-container">
+      <div class="game-informaciones">
+        <div class="game-questions">
+          <img
+            src="./assets/mago_azul-removebg-preview.png"
+            alt="mago azul"
+            class="mago-azul"
+          />
+          <p id="wizard-text">¡Bienvenido Viajero!</p>
+        </div>
+        <div id="choices-container"></div>
+        <button id="start-game">Iniciar Juego</button>
+      </div>
+      <img src="./assets/leyendofzelda.gif" alt="zelda" class="zelda-icon" />
+      <!-- Botón para reproducir música -->
+      <button id="play-music" aria-label="Reproducir música de fondo">
+        Banda Sonora!
+      </button>
+    </div>
+    <footer class="footer">
+      <p>
+        Desarrollado por yhoni-reyes
+        <img
+          src="./assets/bender el tremendo.png"
+          alt="Bender"
+          class="bender-icon-footer"
+        />
+      </p>
+    </footer>
+    <!-- Contenedor de audio -->
+    <audio id="background-music" src="./assets/audio.zelda.m4a" loop></audio>
+    <script src="app.js" defer></script>
+  </body>
+</html>
